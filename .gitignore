@@ -1,0 +1,72 @@
+.idea
+nbproject
+/application/configs/dev/*.php
+/data/
+!/data/locale
+/public/.htaccess
+!.stub
+composer.lock
+composer.phar
+/vendor/*
+phpunit.xml
+Будет удалено application/layouts/partial/footer-index.phtml
+Будет удалено application/layouts/partial/header-index.phtml
+Будет удалено application/models/Dishes/
+Будет удалено application/models/Menu/
+Будет удалено docker/.~lock.docker-compose.yml.dist#
+Будет удалено public/gourmet/
+Будет удалено public/images/
+Будет пропущен репозиторий vendor/guzzle/guzzle
+Будет пропущен репозиторий vendor/sebastian/recursion-context
+Будет пропущен репозиторий vendor/sebastian/diff
+Будет пропущен репозиторий vendor/sebastian/environment
+Будет пропущен репозиторий vendor/sebastian/resource-operations
+Будет пропущен репозиторий vendor/sebastian/exporter
+Будет пропущен репозиторий vendor/sebastian/code-unit-reverse-lookup
+Будет пропущен репозиторий vendor/sebastian/version
+Будет пропущен репозиторий vendor/sebastian/object-enumerator
+Будет пропущен репозиторий vendor/sebastian/comparator
+Будет удалено vendor/sebastian/global-state
+Будет пропущен репозиторий vendor/hybridauth/hybridauth
+Будет пропущен репозиторий vendor/phpdocumentor/reflection-common
+Будет удалено vendor/phpdocumentor/type-resolver
+Будет удалено vendor/phpdocumentor/reflection-docblock
+Будет пропущен репозиторий vendor/satooshi/php-coveralls
+Будет пропущен репозиторий vendor/symfony/finder
+Будет пропущен репозиторий vendor/symfony/debug
+Будет пропущен репозиторий vendor/symfony/config
+Будет пропущен репозиторий vendor/symfony/polyfill-mbstring
+Будет пропущен репозиторий vendor/symfony/console
+Будет пропущен репозиторий vendor/symfony/stopwatch
+Будет пропущен репозиторий vendor/symfony/event-dispatcher
+Будет пропущен репозиторий vendor/symfony/yaml
+Будет пропущен репозиторий vendor/symfony/filesystem
+Будет пропущен репозиторий vendor/psr/http-message
+Будет пропущен репозиторий vendor/psr/log
+Будет пропущен репозиторий vendor/facebook/graph-sdk
+Будет пропущен репозиторий vendor/zendframework/zend-dom
+Будет пропущен репозиторий vendor/zendframework/zend-diactoros
+Будет пропущен репозиторий vendor/webmozart/assert
+Будет пропущен репозиторий vendor/phpspec/prophecy
+Будет пропущен репозиторий vendor/phpunit/php-token-stream
+Будет пропущен репозиторий vendor/phpunit/php-file-iterator
+Будет пропущен репозиторий vendor/phpunit/php-code-coverage
+Будет пропущен репозиторий vendor/phpunit/phpunit
+Будет удалено vendor/phpunit/phpunit-mock-objects
+Будет удалено vendor/phpunit/php-timer
+Будет удалено vendor/phpunit/php-text-template
+Будет пропущен репозиторий vendor/doctrine/lexer
+Будет пропущен репозиторий vendor/doctrine/instantiator
+Будет пропущен репозиторий vendor/doctrine/annotations
+Будет удалено vendor/fortawesome
+Будет удалено vendor/myclabs
+Будет удалено vendor/bin
+Будет удалено vendor/phpmailer
+Будет удалено vendor/zircote
+Будет удалено vendor/bluzphp
+Будет удалено vendor/composer
+Будет удалено vendor/squizlabs
+Будет удалено vendor/js
+Будет удалено vendor/twbs
+Будет удалено vendor/autoload.php
+Будет удалено vendor/public
