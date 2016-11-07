@@ -554,7 +554,11 @@ margin-top: 13px;
 }
 
 #textarea-commit {
-	width: 380px;
+	width: 420px;
+}
+
+#send-commit-btn {
+	float: right;
 }
 
 #newsletter label {
