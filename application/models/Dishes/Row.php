@@ -7,20 +7,18 @@
 /**
  * @namespace
  */
-namespace Application\Auth;
+namespace Application\Dishes;
 
 use Bluz\Auth\AbstractRow;
 
 /**
  * Auth Row
  *
- * @package  Application\Auth
+ * @package  Application\Dishes
  *
  * @property string $created
  * @property string $updated
  *
- * @author   Anton Shevchuk
- * @created  24.10.12 11:57
  */
 class Row extends AbstractRow
 {
@@ -31,7 +29,6 @@ class Row extends AbstractRow
      */
     public function beforeInsert()
     {
-        $this->created = gmdate('Y-m-d H:i:s');
     }
 
     /**
@@ -41,6 +38,5 @@ class Row extends AbstractRow
      */
     public function beforeUpdate()
     {
-        $this->updated = gmdate('Y-m-d H:i:s');
     }
 }

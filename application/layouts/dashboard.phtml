@@ -8,6 +8,9 @@
                 <div class="nav-dashboard" data-spy="affix" data-offset-top="60">
                     <ul class="nav nav-tabs nav-stacked" >
                         <li <?=($this->module('pages')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-edit fa-fw"></i> '.__('Pages'), ['pages', 'grid', [], true]) ?></li>
+
+                        <li <?=($this->module('dishes')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-edit fa-fw"></i> '.__('Dishes'), ['dishes', 'grid', [], true]) ?></li>
+
                         <li <?=($this->module('users')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-user fa-fw"></i> '.__('Users'), ['users', 'grid', [], true]) ?></li>
                         <li <?=($this->module('media')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-picture-o fa-fw"></i> '.__('Media'), ['media', 'grid', [], true]) ?></li>
                         <li <?=($this->module('categories')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-folder-o fa-fw"></i> '.__('Categories'), ['categories', 'tree', [], true]) ?></li>

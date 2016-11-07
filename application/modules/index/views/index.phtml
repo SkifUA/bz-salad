@@ -1,141 +1,114 @@
-<div class="jumbotron">
-    <div class="container">
-        <h1>Congratulations!</h1>
-        <p>You have successfully installed the Skeleton application for <a href="https://github.com/bluzphp">Bluz Framework</a></p>
-    </div>
-</div>
+<body>
+<div class="main">
+    <header>
+        <div class="dashboard-link"><?=$this->ahref('Dashboard', ['dashboard', 'index'])?></div>
 
-<h2>What next?</h2>
-
-<div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
-                    Database setup &rarr;
-                </a>
+        <div class="container_12">
+            <div class="grid_12">
+                <h1><a href="#"><img src="images/fransua.png" alt=""></a></h1>
+                <div class="menu_block">
+                    <nav>
+                        <ul class="sf-menu">
+                            <li><a href="#work-time"><?= __('Режим работы') ?></a></li>
+                            <li><a href="#salad-menu"><?= __('Меню') ?></a></li>
+                            <li><a href="#send-commit"><?= __('Оставить отзыв') ?></a></li>
+                            <!--                            <li><a href="#">--><?//= __('Отзывы') ?><!--</a></li>-->
+                        </ul>
+                    </nav>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
             </div>
         </div>
-        <div id="collapseFour" class="panel-collapse collapse">
-            <div class="panel-body">
-                <ol>
-                    <li>
-                        Setup database structure from <code>structure.ddl</code>
-                    </li>
-                    <li>
-                        Restore database dump from <code>dump.sql</code>
-                    </li>
-                    <li>
-                        Setup configuration at <code>application/configs/dev/</code> directory
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
-                    Login as administrator &rarr;
-                </a>
-            </div>
-        </div>
-        <div id="collapseFive" class="panel-collapse collapse">
-            <div class="panel-body">
-                <p>
-                    Try to login with credentials <code>admin</code> / <code>admin</code>
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                    Create your first controller &rarr;
-                </a>
-            </div>
-        </div>
-        <div id="collapseOne" class="panel-collapse collapse">
-            <div class="panel-body">
-                <ol>
-                    <li>create new folder <code>application/modules/my</code>, where <code>my</code> it's module name </li>
-                    <li>create new subfolder <code>application/modules/my/controllers</code></li>
-                    <li>create file <code>application/modules/my/controllers/index.php</code></li>
-                </ol>
-<pre><code><strong>&lt;?php</strong>
-return
-    <em>/**
-    * @param string $question
-    * @return \closure
-    */</em>
-    function(<var>$question</var> = null) use (<var>$view</var>) {
-        <em>/**
-        * @var Application $this
-        * @var View $view
-        */</em>
-        switch ($question) {
-            case <span>'2+2'</span>:
-            case <span>'2x2'</span>:
-                <var>$answer</var> = 4;
-                break;
-            case <span>'6x8'</span>:
-                <var>$answer</var> = 48;
-                break;
-            default:
-                <var>$answer</var> = 42;
-        }
-        $view->question = <var>$question</var>;
-        $view->answer = <var>$answer</var>;
-    };</code></pre>
-
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                    Create view &rarr;
-                </a>
-            </div>
-        </div>
-        <div id="collapseTwo" class="panel-collapse collapse">
-            <div class="panel-body">
-                <ol>
-                    <li>create new subfolder <code>application/modules/my/views</code></li>
-                    <li>create file <code>application/modules/my/views/index.phtml</code></li>
-                </ol>
-<pre><code>&lt;p&gt;
-<strong>&lt;?php</strong> if (<var>$question</var>) : <strong>?&gt;</strong>
-Q: <strong>&lt;?=</strong>esc(<var>$question</var>)<strong>?&gt;</strong>
-<strong>&lt;php?</strong> endif; <strong>?&gt;</strong>
-A: <strong>&lt;?=</strong>esc(<var>$answer</var>)<strong>?&gt;</strong>
-&lt;/p&gt;
-</code></pre>
-            </div>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-                    Run &rarr;
-                </a>
-            </div>
-        </div>
-        <div id="collapseThree" class="panel-collapse collapse">
-            <div class="panel-body">
-                Try to run:
-                <ul>
-                    <li><a href="<?=$this->baseUrl('/my/');?>"><?=$this->baseUrl('/my/');?></a></li>
-                    <li><a href="<?=$this->baseUrl('/my/index/question/2+2');?>"><?=$this->baseUrl('/my/index/question/2+2');?></a></li>
+    </header>
+    <div class="slider-relative">
+        <div class="slider-block">
+            <div class="slider">
+                <ul class="items">
+                    <li><img src="images/slide.jpg" alt=""></li>
+                    <li><img src="images/slide1.jpg" alt=""></li>
+                    <li class="mb0"><img src="images/slide2.jpg" alt=""></li>
                 </ul>
             </div>
         </div>
     </div>
+    <div class="content page1">
+        <div class="container_12">
+            <div class="grid_7">
+                <h2 id="work-time"><?= __('Режим работы') ?></h2>
+                <!--                <div class="page1_block col1"> <img src="images/welcome_img.png" alt="">-->
+                <div class="extra_wrapper">
+                    <p><span class="col2"><a href="#">Click here</a></span> for more info about this free website template created by TemplateMonster.com </p>
+                    Aenean nonummy hendrerit mau rellus porta. Fusce suscipit varius m sociis natoque penaibet magni parturient montes nasetur ridiculumula dui. <br>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="grid_12">
+                <div class="hor_separator"></div>
+            </div>
+            <div class="grid_12">
+                <div class="car_wrap">
+                    <h2 id="salad-menu"><?= __('Сегодня мы предлогаем')?></h2>
+                    <!--                    <a href="#" class="prev"></a><a href="#" class="next"></a>-->
+                    <ul class="carousel1">
+                        <?php $number = 4;
+                        $count = count($menu);
+                        foreach ($menu as $dish):
+                            ?>
+                        <li>
+                            <div><img src="images/page1_img1.jpg" alt="">
+                                <div class="col1 upp"> <a href="#"><?= $dish->name ?></a></div>
+                                <p><span> <?= $dish->description ?></span></p>
+                                <div class="price"><?= $dish->price / 100 ?> грн</div>
+                            </div>
+                        </li>
+                        <?php
+                        if ($dish->id % $number == 0 && $dish->id != $count): ?>
+                            </ul>
+                            <div class="hor_separator"></div>
+                            <ul class="carousel1">
+
+                        <?php
+                        endif;
+                        endforeach;
+
+                        ?>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="container_12">
+        <div class="hor_separator"></div>
+        <div class="grid_12">
+            <h3 id="send-commit"><?= __('Оставить отзыв')?></h3>
+            <p class="col1">Тут Вы можете оставить отзыв или написать что бы Вы хотели видеть в меню</p>
+            <form id="recall-info" action="#">
+                <label >
+                    <textarea id="textarea-commit" class="form-control" rows="4" placeholder="Отзыв"></textarea>
+                    <a href="#" class="btn" data-type="submit"><?= __('Отправить отзыв') ?></a></label>
+            </form>
+        </div>
+    </div>
+
+    <div class="container_12">
+        <div class="hor_separator"></div>
+        <div class="grid_12">
+            <h3><?= __('Подписаться на рассылку')?></h3>
+            <p class="col1">Вы можете подписаться на нашу рассылку для получения информации об изменении меню или режима работы</p>
+            <form id="newsletter" action="#">
+                <div class="success">Your subscribe request has been sent!</div>
+                <label class="email">
+                    <input type="email" value="" placeholder="Email">
+                    <a href="#" class="btn" data-type="submit"><?= __('Подписаться') ?></a> <span class="error">*This is not a valid email address.</span> </label>
+            </form>
+        </div>
+    </div>
+    <div class="container_12">
+        <div class="hor_separator"></div>
+    </div>
 </div>
+
+</body>

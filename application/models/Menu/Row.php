@@ -7,22 +7,18 @@
 /**
  * @namespace
  */
-namespace Application\Auth;
+namespace Application\Menu;
 
-use Bluz\Auth\AbstractRow;
 
 /**
  * Auth Row
  *
- * @package  Application\Auth
+ * @package  Application\Menu
  *
- * @property string $created
- * @property string $updated
- *
- * @author   Anton Shevchuk
- * @created  24.10.12 11:57
+ * @property integer $id
+ * @property integer $dishId
  */
-class Row extends AbstractRow
+class Row extends \Bluz\Db\Row
 {
     /**
      * __insert

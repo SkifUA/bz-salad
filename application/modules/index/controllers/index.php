@@ -12,12 +12,19 @@
 namespace Application;
 
 use Bluz\Controller\Controller;
+use Application\Menu;
+
 
 /**
  * @return void
  */
-return function () {
+return function ()  {
     /**
      * @var Controller $this
      */
+
+    $menuTable = Menu\Table::getInstance();
+    $menu = $menuTable->getMenu();
+
+    $this->assign('menu', $menu);
 };

@@ -8,7 +8,14 @@
 
 namespace Application\Dishes;
 
-
+/**
+ * Pages Table
+ *
+ * @package  Application\Dishes
+ *
+ * @method   static Row findRow($primaryKey)
+ * @method   static Row findRowWhere($whereList)
+ */
 class Table extends \Bluz\Db\Table
 {
     /**
@@ -17,4 +24,11 @@ class Table extends \Bluz\Db\Table
      * @var string
      */
     protected $table = 'dishes';
+
+
+    /**
+     * Primary key(s)
+     * @var array
+     */
+    protected $primary = array('id');
 }

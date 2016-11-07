@@ -1,11 +1,13 @@
 <?php
 /**
+ * CRUD for pages
+ *
  * @author   Anton Shevchuk
  * @created  30.10.12 09:29
  */
 namespace Application;
 
-use Application\Users;
+use Application\Dishes;
 use Bluz\Controller\Controller;
 use Bluz\Controller\Mapper\Crud;
 
@@ -14,7 +16,7 @@ use Bluz\Controller\Mapper\Crud;
  * @accept JSON
  * @privilege Management
  *
- * @return array
+ * @return mixed
  */
 return function () {
     /**
@@ -22,12 +24,12 @@ return function () {
      */
     $crud = new Crud();
 
-    $crud->setCrud(Users\Crud::getInstance());
+    $crud->setCrud(Dishes\Crud::getInstance());
 
     $crud->get('system', 'crud/get');
     $crud->post('system', 'crud/post');
     $crud->put('system', 'crud/put');
     $crud->delete('system', 'crud/delete');
-//var_dump($crud->run()); exit;
+
     return $crud->run();
 };
