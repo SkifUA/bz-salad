@@ -45,4 +45,11 @@ class Table extends \Bluz\Db\Table
 
         return $select->execute();
     }
+
+    public function updateListByRequest($data)
+    {
+        foreach ($data as $key => $value) {
+            $this->update(['dishId' => $value], ['id' => substr($key, 5)]);
+        }
+    }
 }

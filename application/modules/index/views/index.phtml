@@ -53,8 +53,11 @@
                     <!--                    <a href="#" class="prev"></a><a href="#" class="next"></a>-->
                     <ul class="carousel1">
                         <?php $number = 4;
+                        $list = [];
                         $count = count($menu);
+                        $order = 1;
                         foreach ($menu as $dish):
+                        if (in_array($dish->name, $list)) continue;
                             ?>
                         <li>
                             <div><img src="images/page1_img1.jpg" alt="">
@@ -64,13 +67,15 @@
                             </div>
                         </li>
                         <?php
-                        if ($dish->id % $number == 0 && $dish->id != $count): ?>
+                        if ($order % $number == 0 && $order != $count): ?>
                             </ul>
                             <div class="hor_separator"></div>
                             <ul class="carousel1">
 
                         <?php
                         endif;
+                        $order += 1;
+                        $list[] = $dish->name;
                         endforeach;
 
                         ?>

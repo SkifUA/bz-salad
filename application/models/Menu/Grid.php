@@ -7,14 +7,14 @@
 /**
  * @namespace
  */
-namespace Application\Users;
+namespace Application\Menu;
 
 use Bluz\Db\Query\Select;
 use Bluz\Grid\Source\SelectSource;
 
 /**
  * @category Application
- * @package  Users
+ * @package  Menu
  */
 class Grid extends \Bluz\Grid\Grid
 {
