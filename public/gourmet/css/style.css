@@ -710,3 +710,12 @@ footer a:hover {
 	color: black;
 	text-decoration: none;
 }
+
+/*********index********/
+
+#comment-success,
+#comment-error {
+	position: absolute;
+	margin-top: -15px;
+	display: none;
+}

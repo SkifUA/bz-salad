@@ -9,6 +9,7 @@ composer.lock
 composer.phar
 /vendor/*
 phpunit.xml
+phinx.yml
 Будет удалено application/layouts/partial/footer-index.phtml
 Будет удалено application/layouts/partial/header-index.phtml
 Будет удалено application/models/Dishes/
