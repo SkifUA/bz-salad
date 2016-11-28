@@ -73,12 +73,14 @@
 			bl=true
 			$.ajax({
 				type:"POST"
-				,url:o.mailHandlerURL
+				,url:"/subscribers/save"
+				// ,url:o.mailHandlerURL
 				,data:{
-					name:name.length?name.val():email.val().split('@')[0]
-					,email:email.val()
-					,owner_email:o.ownerEmail					
-					,sitename:o.sitename||o.ownerEmail.split('@')[1]
+					email:email.val()
+					// name:name.length?name.val():email.val().split('@')[0]
+					// ,email:email.val()
+					// ,owner_email:o.ownerEmail
+					// ,sitename:o.sitename||o.ownerEmail.split('@')[1]
 				}
 				,success:function(e){
 					bl=false

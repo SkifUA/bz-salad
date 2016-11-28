@@ -2,7 +2,7 @@
 
 use Phinx\Migration\AbstractMigration;
 
-class DisheMehu extends AbstractMigration
+class CommentsAndSubscribers extends AbstractMigration
 {
     /**
      * Change Method.
@@ -26,30 +26,29 @@ class DisheMehu extends AbstractMigration
      * with the Table class.
      */
 
+
     /**
      * Migrate Up.
      */
     public function up()
     {
         $this->query("
-               CREATE TABLE `dishes` (
-              `id` int(11) NOT NULL AUTO_INCREMENT,
-              `name` varchar(255) NOT NULL,
-              `description` text,
-              `photo` varchar(255) DEFAULT NULL,
-              `price` int(11) DEFAULT NULL,
-              PRIMARY KEY (`id`)
-            ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+               CREATE TABLE `comments` (
+                  `id` int(11) NOT NULL AUTO_INCREMENT,
+                  `comment` text NOT NULL,
+                  `created` timestamp NOT NULL,
+                  PRIMARY KEY (`id`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1
         ");
-        
+
         $this->query("
-           CREATE TABLE `menu` (
+            CREATE TABLE `subscribers` (
               `id` int(11) NOT NULL AUTO_INCREMENT,
-              `dishId` int(11) NOT NULL,
+              `email` varchar(100) NOT NULL,
               PRIMARY KEY (`id`)
             ) ENGINE=InnoDB DEFAULT CHARSET=latin1
         ");
-        
+
     }
 
     /**
@@ -57,7 +56,7 @@ class DisheMehu extends AbstractMigration
      */
     public function down()
     {
-        $this->dropTable('dishes');
-        $this->dropTable('menu');
+        $this->dropTable('comments');
+        $this->dropTable('subscribers');
     }
 }

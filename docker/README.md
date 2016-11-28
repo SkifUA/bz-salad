@@ -42,3 +42,5 @@ After installing composer will run bin/install script for creating data/* folder
  $ docker exec -ti salad_php -u www-data phpunit
  ```
  
+  $ docker exec -ti salad_php vendor/bin/phinx migrate -e development
+  $ docker exec -ti salad_php vendor/bin/phinx seed:run -e development
