@@ -553,11 +553,11 @@ margin-top: 13px;
 	position: relative;
 }
 
-#textarea-commit {
+#textarea-comment {
 	width: 420px;
 }
 
-#send-commit-btn {
+#send-comment-btn {
 	float: right;
 }
 

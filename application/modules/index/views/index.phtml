@@ -39,7 +39,7 @@
 
                 <div class="extra_wrapper">
                     <p>Автомат работает круглосуточно </p>
-                    Обновление блюд с 8:00 до 9:00 в будние дни <br>
+                    Обновление блюд с 8:00 до 9:30 в будние дни <br>
                     <div class="clear"></div>
                 </div>
             </div>
@@ -89,23 +89,23 @@
         <div class="hor_separator"></div>
         <div class="grid_6">
             <h3 id="send-commit"><?= __('Оставить отзыв')?></h3>
-            <p class="col1">Тут Вы можете оставить отзыв или написать что бы Вы хотели видеть в меню</p>
+            <p class="col1"><?= __('Тут Вы можете оставить отзыв или написать что бы Вы хотели видеть в меню') ?></p>
             <form id="recall-info" action="#">
-                <div id="comment-success" class="success">Your subscribe request has been sent!</div>
+                <div id="comment-success" class="success"><?= __('Ваше сообщение отправленно') ?>!</div>
                 <label ><span id="comment-error" class="error">*This is not a valid text.</span>
-                    <textarea id="textarea-commit" class="form-control" rows="3" placeholder="Отзыв"></textarea>
-                    <a id="send-commit-btn" href="#send-commit" class="btn" data-type="submit"><?= __('Отправить отзыв') ?></a></label>
+                    <textarea id="textarea-comment" class="form-control" rows="3" placeholder="Отзыв"></textarea>
+                    <a id="send-comment-btn" href="#send-commit" class="btn" data-type="submit"><?= __('Отправить отзыв') ?></a></label>
 
             </form>
         </div>
         <div class="grid_6">
             <h3><?= __('Подписаться на рассылку')?></h3>
-            <p class="col1">Вы можете подписаться на нашу рассылку для получения информации об изменении меню или режима работы</p>
+            <p class="col1"><?= __('Вы можете подписаться на нашу рассылку для получения информации об изменении меню или режима работы') ?></p>
             <form id="newsletter" action="#">
-                <div class="success">Your subscribe request has been sent!</div>
+                <div class="success"><?= 'email сохранен'?>!</div>
                 <label class="email">
                     <input type="email" value="" placeholder="Email">
-                    <a href="#" class="btn" data-type="submit"><?= __('Подписаться') ?></a> <span class="error">*This is not a valid email address.</span> </label>
+                    <a href="#" class="btn" data-type="submit"><?= __('Подписаться') ?></a> <span class="error"><?= __('*Не корректный адрес') ?> </span> </label>
             </form>
         </div>
     </div>
@@ -115,19 +115,25 @@
     </div>
 </div>
 <script>
-//    $('#subscribeBtn').on('click', function () {
-//        var email = $('#subscribeEmail').val();
-//        $.ajax({
-//            type: "POST",
-//            url: "/projects/assign-users",
-//            data: {email: email},
-//            dataType: 'json',
-//            success: function (data) {
-//
-//            }
-//        })
-//
-//    });
+    $('#send-comment-btn').on('click', function (e) {
+        e.preventDefault();
+        var comment = $('#textarea-comment').val();
+        if (comment != '') {
+            $.ajax({
+                type: "POST",
+                url: "/comments/send-comment",
+                data: {comment: comment},
+                success: function (data) {
+                    $('#comment-success').css('display', 'block');
+                    setTimeout(function () {
+                        $('#comment-success').css('display', 'none');
+                        $('#textarea-comment').val('');
+                    }, 1000)
+                }
+            })
+        }
+
+    });
 </script>
 
 </body>

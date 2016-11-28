@@ -73,7 +73,7 @@
 			bl=true
 			$.ajax({
 				type:"POST"
-				,url:"/subscribers/save"
+				,url:"/subscribers/add-email"
 				// ,url:o.mailHandlerURL
 				,data:{
 					email:email.val()
