@@ -11,6 +11,8 @@
 
                         <li <?=($this->module('dishes')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-edit fa-fw"></i> '.__('Dishes'), ['dishes', 'grid', [], true]) ?></li>
                         <li <?=($this->module('menu')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-edit fa-fw"></i> '.__('Menu'), ['menu', 'grid', [], true]) ?></li>
+                        <li <?=($this->module('comments')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-edit fa-fw"></i> '.__('Comments'), ['comments', 'grid', [], true]) ?></li>
+                        <li <?=($this->module('subscribers')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-edit fa-fw"></i> '.__('Subscribers'), ['subscribers', 'grid', [], true]) ?></li>
 
                         <li <?=($this->module('users')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-user fa-fw"></i> '.__('Users'), ['users', 'grid', [], true]) ?></li>
                         <li <?=($this->module('media')?'class="active"':'')?>><?= $this->ahref('<i class="fa fa-picture-o fa-fw"></i> '.__('Media'), ['media', 'grid', [], true]) ?></li>
